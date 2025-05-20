@@ -50,13 +50,13 @@ export const Products = () => {
     {
       name: "Classic Free-Range",
       description: "Our signature farm-fresh eggs from free-range, happy hens",
-      price: "$5.99",
+      price: "#5000",
       image: "/images/1.jpg",
     },
     {
       name: "Organic Jumbo",
       description: "Extra large eggs from our organically-fed heritage hens",
-      price: "$7.49",
+      price: "#5000",
       image: "/images/3.png",
     },
     {
@@ -122,7 +122,7 @@ export const Products = () => {
                   whileTap={{ scale: 0.95 }}
                   className="w-full bg-amber-500 text-white py-3 rounded-xl font-medium hover:bg-amber-600 transition-colors"
                 >
-                  Add to Cart
+                  Order Now
                 </motion.button>
               </div>
             </motion.div>
