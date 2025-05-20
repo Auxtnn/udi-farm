@@ -56,13 +56,13 @@ export const Products = () => {
     {
       name: "Organic Jumbo",
       description: "Extra large eggs from our organically-fed heritage hens",
-      price: "#5000",
+      price: "#7000",
       image: "/images/1.jpg",
     },
     {
       name: "Omega-3 Enriched",
       description: "Nutrient-rich eggs from hens fed with flaxseed supplements",
-      price: "#5000",
+      price: "#6000",
       image: "/images/3.jpg",
     },
   ];
