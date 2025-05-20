@@ -132,7 +132,7 @@ export const Contact = () => {
                       Address
                     </p>
                     <span className="text-base md:text-lg font-medium break-words">
-                      123 Farm Road, Countryside, CA 98765
+                      123 Farm Road
                     </span>
                   </div>
                 </motion.div>

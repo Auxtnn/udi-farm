@@ -132,7 +132,7 @@ const About = () => {
                     food used to taste – rich, flavorful, and natural."
                   </p>
                   <p className="text-right text-amber-500 mt-4">
-                    - Ifeoma Eze, Founder
+                    - Chioma Ifeanyi-Eze, Founder
                   </p>
                 </div>
               </div>
