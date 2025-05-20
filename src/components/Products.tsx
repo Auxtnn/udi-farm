@@ -51,13 +51,13 @@ export const Products = () => {
       name: "Classic Free-Range",
       description: "Our signature farm-fresh eggs from free-range, happy hens",
       price: "#5000",
-      image: "/images/1.jpg",
+      image: "/images/3.png",
     },
     {
       name: "Organic Jumbo",
       description: "Extra large eggs from our organically-fed heritage hens",
       price: "#5000",
-      image: "/images/3.png",
+      image: "/images/1.jpg",
     },
     {
       name: "Omega-3 Enriched",
