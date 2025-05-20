@@ -7,31 +7,31 @@ import { Space_Grotesk } from "next/font/google";
 const font = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Golden Yolk | Farm Fresh Eggs Delivered",
+  title: "Udi Yolk | Farm Fresh Eggs Delivered",
   description:
     "Premium pasture-raised eggs delivered from our family farm to your table. Experience the Golden Yolk difference with our nutritious, delicious eggs.",
   keywords:
     "farm fresh eggs, pasture raised eggs, organic eggs, egg delivery, local eggs",
-  authors: [{ name: "Golden Yolk Farm" }],
-  creator: "Golden Yolk Farm",
-  publisher: "Golden Yolk Farm",
+  authors: [{ name: "Udi Yolk Farm" }],
+  creator: "Udi Yolk Farm",
+  publisher: "Udi Yolk Farm",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "Golden Yolk | Farm Fresh Eggs Delivered",
+    title: "Udi Yolk | Farm Fresh Eggs Delivered",
     description:
       "Premium pasture-raised eggs delivered from our family farm to your table.",
-    url: "https://goldenyolk.com",
-    siteName: "Golden Yolk",
+    url: "https://udi-farm.vercel.app",
+    siteName: "Udi Yolk",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Golden Yolk | Farm Fresh Eggs Delivered",
+    title: "Udi Yolk | Farm Fresh Eggs Delivered",
     description:
       "Premium pasture-raised eggs delivered from our family farm to your table.",
   },
