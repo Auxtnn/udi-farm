@@ -26,10 +26,29 @@ const fadeIn = {
   },
 };
 
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const scaleUp = {
+  hidden: { scale: 0.8, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
 export const Contact = () => {
   return (
-    <section id="contact" className="py-16 bg-white">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+    <section id="contact" className="py-16 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-screen-xl">
         <motion.div
           className="text-center mb-12"
           initial="hidden"
@@ -53,53 +72,71 @@ export const Contact = () => {
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          <div className="bg-amber-50 p-6 md:p-8 rounded-2xl shadow-lg">
+          <div className="bg-amber-50 p-6 md:p-8 rounded-2xl shadow-lg overflow-hidden">
             <h3 className="text-xl md:text-2xl font-bold text-amber-800 mb-6">
               Contact Information
             </h3>
 
             <div className="space-y-6">
-              <motion.div className="flex items-center" whileHover={{ x: 10 }}>
-                <div className="bg-amber-100 p-2 md:p-3 rounded-full mr-4">
-                  <Phone size={20} className="text-amber-600" />
-                </div>
-                <div className="overflow-hidden">
-                  <p className="text-amber-500 text-xs md:text-sm mb-1">
-                    Phone
-                  </p>
-                  <span className="text-base md:text-lg font-medium truncate block">
-                    +234 (555) 123-4567
-                  </span>
-                </div>
-              </motion.div>
+              <div className="group flex items-center overflow-hidden">
+                <motion.div
+                  className="flex items-center w-full"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "tween" }}
+                >
+                  <div className="bg-amber-100 p-2 md:p-3 rounded-full mr-4 flex-shrink-0">
+                    <Phone size={20} className="text-amber-600" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-amber-500 text-xs md:text-sm mb-1">
+                      Phone
+                    </p>
+                    <span className="text-base md:text-lg font-medium truncate block">
+                      +1 (555) 123-4567
+                    </span>
+                  </div>
+                </motion.div>
+              </div>
 
-              <motion.div className="flex items-center" whileHover={{ x: 10 }}>
-                <div className="bg-amber-100 p-2 md:p-3 rounded-full mr-4">
-                  <Mail size={20} className="text-amber-600" />
-                </div>
-                <div className="overflow-hidden">
-                  <p className="text-amber-500 text-xs md:text-sm mb-1">
-                    Email
-                  </p>
-                  <span className="text-base md:text-lg font-medium truncate block">
-                    hello@udisegg.com
-                  </span>
-                </div>
-              </motion.div>
+              <div className="group flex items-center overflow-hidden">
+                <motion.div
+                  className="flex items-center w-full"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "tween" }}
+                >
+                  <div className="bg-amber-100 p-2 md:p-3 rounded-full mr-4 flex-shrink-0">
+                    <Mail size={20} className="text-amber-600" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-amber-500 text-xs md:text-sm mb-1">
+                      Email
+                    </p>
+                    <span className="text-base md:text-lg font-medium truncate block">
+                      hello@udisegg.com
+                    </span>
+                  </div>
+                </motion.div>
+              </div>
 
-              <motion.div className="flex items-center" whileHover={{ x: 10 }}>
-                <div className="bg-amber-100 p-2 md:p-3 rounded-full mr-4 flex-shrink-0">
-                  <MapPin size={20} className="text-amber-600" />
-                </div>
-                <div className="overflow-hidden">
-                  <p className="text-amber-500 text-xs md:text-sm mb-1">
-                    Address
-                  </p>
-                  <span className="text-base md:text-lg font-medium break-words">
-                    123 Farm Road
-                  </span>
-                </div>
-              </motion.div>
+              <div className="group flex items-center overflow-hidden">
+                <motion.div
+                  className="flex items-center w-full"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "tween" }}
+                >
+                  <div className="bg-amber-100 p-2 md:p-3 rounded-full mr-4 flex-shrink-0">
+                    <MapPin size={20} className="text-amber-600" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-amber-500 text-xs md:text-sm mb-1">
+                      Address
+                    </p>
+                    <span className="text-base md:text-lg font-medium break-words">
+                      123 Farm Road, Countryside, CA 98765
+                    </span>
+                  </div>
+                </motion.div>
+              </div>
             </div>
 
             <div className="mt-8 md:mt-10">
@@ -109,7 +146,8 @@ export const Contact = () => {
               <div className="flex space-x-3 md:space-x-4">
                 <motion.a
                   href="#"
-                  whileHover={{ y: -5 }}
+                  whileHover={{ y: -3 }}
+                  transition={{ type: "tween" }}
                   className="bg-amber-100 p-2 md:p-3 rounded-full hover:bg-amber-200 transition-colors"
                 >
                   <Instagram size={20} className="text-amber-600" />
@@ -117,7 +155,8 @@ export const Contact = () => {
 
                 <motion.a
                   href="#"
-                  whileHover={{ y: -5 }}
+                  whileHover={{ y: -3 }}
+                  transition={{ type: "tween" }}
                   className="bg-amber-100 p-2 md:p-3 rounded-full hover:bg-amber-200 transition-colors"
                 >
                   <Facebook size={20} className="text-amber-600" />
@@ -125,7 +164,8 @@ export const Contact = () => {
 
                 <motion.a
                   href="#"
-                  whileHover={{ y: -5 }}
+                  whileHover={{ y: -3 }}
+                  transition={{ type: "tween" }}
                   className="bg-amber-100 p-2 md:p-3 rounded-full hover:bg-amber-200 transition-colors"
                 >
                   <Twitter size={20} className="text-amber-600" />
@@ -135,10 +175,10 @@ export const Contact = () => {
           </div>
 
           <motion.div
-            className="bg-white border-2 border-amber-100 p-6 md:p-8 rounded-2xl shadow-lg"
-            initial={{ opacity: 0, x: 50 }}
+            className="bg-white border-2 border-amber-100 p-6 md:p-8 rounded-2xl shadow-lg overflow-hidden"
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6, type: "tween" }}
             viewport={{ once: true }}
           >
             <h3 className="text-xl md:text-2xl font-bold text-amber-800 mb-6">
@@ -179,8 +219,9 @@ export const Contact = () => {
               </div>
 
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "tween", duration: 0.2 }}
                 className="w-full bg-amber-500 text-white py-2 md:py-3 rounded-xl font-medium hover:bg-amber-600 transition-colors text-sm md:text-base"
               >
                 Send Message
